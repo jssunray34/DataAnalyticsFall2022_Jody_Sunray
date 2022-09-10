@@ -1,6 +1,6 @@
-EPI_data <- read.csv(”<path>/2010EPI_data.csv")
+EPI_data <- read.csv("2010EPI_data.csv")
 #or
-#EPI_data <- read.xlsx(”<path>/2010EPI_data.xlsx")
+#EPI_data <- read.xlsx("<path>/2010EPI_data.xlsx")
 # Note: replace default data frame name – cannot start with numbers!
 View(EPI_data)
 #
@@ -11,5 +11,5 @@ tf <- is.na(EPI) # records True values if the value is NA
 E <- EPI[!tf] # filters out NA values, new array
 
 #other data
-GRUMP_data <- read.csv(”<path>/GPW3_GRUMP_SummaryInformation_2010.csv")
+GRUMP_data <- read.csv("GPW3_GRUMP_SummaryInformation_2010.csv")
 
