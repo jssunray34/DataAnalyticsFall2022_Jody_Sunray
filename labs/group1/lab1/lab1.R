@@ -103,6 +103,12 @@ qqplot(EPI, DALY)
 qqplot(EPI, WATER_H)
 qqplot(DALY, WATER_H)
 
+# inter-compare: EPI, ENVHEALTH, ECOSYSTEM, DALY, AIR_H, WATER_H,
+# AIR_E, WATER_E, and BIODIVERSITY
+boxplot(EPI, ENVHEALTH)
+boxplot(AIR_H, AIR_E)
+boxplot(WATER_H, WATER_E)
+
 ####################
 #### Exercise 2 ####
 ####################
@@ -150,3 +156,41 @@ qqline(x)
 # e.g., EPI_South_Asia <- EPI[<what is this>]
 EPI_South_Asia <- EPI[EPI_regions=="South Asia"]
 EPI_South_Asia
+
+####################
+#### GRUMP Data ####
+####################
+
+# Read in the data
+GRUMP_data <- read.csv("GPW3_GRUMP_SummaryInformation_2010.csv")
+View(GRUMP_data)
+
+attach(GRUMP_data) # sets the 'default' object
+
+####################
+#### Exercise 1 ####
+####################
+
+#####################
+### Area Variable ###
+#####################
+
+Area <- as.numeric(Area)
+
+# exploring the distribution
+summary(Area) # stats
+fivenum(Area, na.rm = TRUE)
+stem(Area)
+hist(Area)
+lines(density(Area, na.rm = TRUE, bw = 1.)) # or try bw="SJ"
+rug(Area)
+
+# fitting a distribution beyond histograms
+plot(ecdf(Area), do.points=FALSE, verticals=TRUE) # cumulative density function
+# quantile-quantile
+par(pty="s")
+qqnorm(Area); qqline(Area)
+# make a Q-Q plot against the generating distribution
+x <- seq(30, 95, 1)
+qqplot(qt(ppoints(250), df = 5), x, xlab = "Q-Q plot for t dsn")
+qqline(x)
