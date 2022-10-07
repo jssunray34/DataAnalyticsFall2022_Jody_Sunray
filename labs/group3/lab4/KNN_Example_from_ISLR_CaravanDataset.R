@@ -1,9 +1,14 @@
-# KNN example using ISLR package (Textbook) 
+###################################
+#### KNN Example from Textbook ####
+###################################
+
+# KNN example using ISLR package (Textbook)
 library(ISLR) # you need to install the ISLR package first
 # Caravan dataset is about the insurance
 library(class)
 head(Caravan)
 str(Caravan)
+View(Caravan)
 # Purchase: Factor w/ 2 levels "No","Yes": 1 1 1 1 1 1 1 1 1 1 ...
 # "Yes" or "No" indicates wheater people purchased the insurance policy or not. 
 dim(Caravan) # it has 5822 rows (observations) and 86 features/columns  

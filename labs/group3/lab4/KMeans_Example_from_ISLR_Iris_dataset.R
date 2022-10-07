@@ -1,4 +1,8 @@
-# ISLR Package (ISRL 7th Eidtion Textbook )
+######################################
+#### KMeans Example from Textbook ####
+######################################
+
+# ISLR Package (ISRL 7th Edition Textbook )
 # KMeans example with Iris dataset
 # KMeans is an Unsupervised technique 
 library(ISLR)
@@ -20,4 +24,3 @@ table(irisClusters$cluster,iris$Species)
 library(cluster)
 help("clusplot")
 clusplot(iris,irisClusters$cluster, color = TRUE, shade = TRUE, labels = 0, lines = 0)
-
