@@ -1,6 +1,6 @@
-#######################
+######################
 #### lab1_splom.R ####
-#######################
+######################
 
 help(splom) # draw conditional scatter plot matrices and parallel coordinate plots
 
