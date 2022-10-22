@@ -2,6 +2,8 @@
 #### lab1_kknn1.R ####
 ######################
 
+install.packages("kknn")
+
 # performs k-nearest neighbor classification of a test set using a training set
 require(kknn)
 
