@@ -6,6 +6,7 @@
 # KMeans example with Iris dataset
 # KMeans is an Unsupervised technique 
 library(ISLR)
+library(ggplot2)
 head(iris)
 str(iris)
 # visually inspecting the three factors: Species clusters with a plot
